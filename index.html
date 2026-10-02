@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Scadenze auto</title>
+<meta name="apple-mobile-web-app-title" content="Scadenze">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAC+ElEQVR4nO3du21VQRRAUYzIiMkogWIIaAGKghYIKIYSyIiRM0TqgC1Zc8Z6c5/WKuDK0tk69yNr3sPj459X8D+vb/0HcC5xkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKQ326/44ePv7dfkmX7+eLfxag8b/01QFofYlcieOGRxoHkiG545lHGm+VymcSjjZMPpjOJQxvkmM/IqS1qPw9q4iuVJ2RykxTisjWtZm5fNQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRykxTj2HhLCS1ubl81BWo/D8riK5UnZHKRRHJbH+SYzmm4OfZxsOJ0NtxV9nGk+F0dN3qGzjpp8SiI3dO4htdwZr7IkcZDEQRIHSRwkcZDEQRIHaf/PeP39/nb7NXmm1592ftLc+YVUFofYlcieOGRxoHkiG545lHGm+VymcSjjZMPpjOJQxvkmM/IqS1qPw9q4iuVJ2RykxTisjWtZm5fNQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZAW49h7ggwvbW1eNgdpPQ7L4yqWJ2VzkEZxWB7nm8xoujn0cbLhdDbcVvRxpvlcnEN6h846h/QpidzQuScYc2e8ypLEQRIHSRwkcZDEQRIHSRyk/b/x9v7r5+3X5Jl+ffm28Wo7v5DK4hC7EtkThywONE9kwzOHMs40n8s0DmWcbDidURzKON9kRl5lSetxWBtXsTwpm4O0GIe1cS1r87I5SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0GMfeQ0J4aWvzsjlI63FYHlexPCmbgzSKw/I432RG082hj5MNp7PhtqKPM83n4qjJO3TWUZNPSeSGzj2kljvjVZYkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIg/QM4TraPPg7bhgAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAC+ElEQVR4nO3du21VQRRAUYzIiMkogWIIaAGKghYIKIYSyIiRM0TqgC1Zc8Z6c5/WKuDK0tk69yNr3sPj459X8D+vb/0HcC5xkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKQ326/44ePv7dfkmX7+eLfxag8b/01QFofYlcieOGRxoHkiG545lHGm+VymcSjjZMPpjOJQxvkmM/IqS1qPw9q4iuVJ2RykxTisjWtZm5fNQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRykxTj2HhLCS1ubl81BWo/D8riK5UnZHKRRHJbH+SYzmm4OfZxsOJ0NtxV9nGk+F0dN3qGzjpp8SiI3dO4htdwZr7IkcZDEQRIHSRwkcZDEQRIHaf/PeP39/nb7NXmm1592ftLc+YVUFofYlcieOGRxoHkiG545lHGm+VymcSjjZMPpjOJQxvkmM/IqS1qPw9q4iuVJ2RykxTisjWtZm5fNQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZAW49h7ggwvbW1eNgdpPQ7L4yqWJ2VzkEZxWB7nm8xoujn0cbLhdDbcVvRxpvlcnEN6h846h/QpidzQuScYc2e8ypLEQRIHSRwkcZDEQRIHSRyk/b/x9v7r5+3X5Jl+ffm28Wo7v5DK4hC7EtkThywONE9kwzOHMs40n8s0DmWcbDidURzKON9kRl5lSetxWBtXsTwpm4O0GIe1cS1r87I5SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYO0GMfeQ0J4aWvzsjlI63FYHlexPCmbgzSKw/I432RG082hj5MNp7PhtqKPM83n4qjJO3TWUZNPSeSGzj2kljvjVZYkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIg/QM4TraPPg7bhgAAAABJRU5ErkJggg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F7F7F5; --ink: #1A1A1A; --muted: #8A8A85; --chip: #E7E7E3;
+    --bollo: #2347E0; --revisione: #F5A300; --rca: #13915A;
+    --eu: #1F3FA8;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #121212; --ink: #F2F2F2; --muted: #8C8C8C; --chip: #2A2A2A; }
+  }
+  :root[data-theme="dark"] { --bg: #121212; --ink: #F2F2F2; --muted: #8C8C8C; --chip: #2A2A2A; }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { height: 100%; }
+  body {
+    margin: 0; height: 100%; background: var(--bg); color: var(--ink);
+    font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  main { height: 100%; display: flex; flex-direction: column; gap: 10px; padding: 10px; max-width: 640px; margin: 0 auto; }
+
+  .plates { display: flex; gap: 8px; overflow-x: auto; padding: 2px; scrollbar-width: none; flex: none; }
+  .plates::-webkit-scrollbar { display: none; }
+  button { font: inherit; color: inherit; border: 0; cursor: pointer; }
+  button:focus-visible { outline: 3px solid var(--bollo); outline-offset: 2px; }
+
+  .plate {
+    flex: none; display: flex; align-items: stretch;
+    height: 46px; border-radius: 8px; overflow: hidden;
+    background: #FFFFFF; color: #111;
+    box-shadow: inset 0 0 0 2px #111;
+    opacity: .4;
+  }
+  .plate.active { opacity: 1; }
+  .plate .eu {
+    width: 22px; background: var(--eu); color: #fff;
+    display: flex; align-items: flex-end; justify-content: center;
+    font-size: 11px; font-weight: 800; padding-bottom: 5px;
+  }
+    .plate.noplate .num { font-size: 1rem; letter-spacing: 0; font-weight: 500; }
+  .plate .num { padding: 0 14px; display: flex; align-items: center; font-weight: 800; font-size: 1.3rem; letter-spacing: .06em; }
+  .add {
+    flex: none; width: 46px; height: 46px; border-radius: 8px;
+    background: var(--chip); font-size: 1.6rem; font-weight: 500; line-height: 1;
+  }
+  .edit { flex: none; height: 46px; border-radius: 8px; padding: 0 14px; background: transparent; color: var(--muted); font-size: 1rem; margin-left: auto; }
+
+  .tile {
+    position: relative; flex: 1; border-radius: 28px; padding: 22px 24px;
+    display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;
+    transition: transform .12s ease;
+  }
+  .tile:active { transform: scale(.98); }
+  .tile:focus-within { outline: 4px solid currentColor; outline-offset: 3px; }
+  .bollo { background: var(--bollo); color: #fff; }
+  .revisione { background: var(--revisione); color: #1A1400; }
+  .rca { background: var(--rca); color: #fff; }
+  .name { font-size: clamp(1.4rem, 6vw, 2rem); font-weight: 500; margin: 0; }
+  .date { font-size: clamp(2.2rem, 11vw, 3.6rem); font-weight: 800; line-height: 1; letter-spacing: -0.02em; margin: 0; }
+  .left { font-size: clamp(1rem, 4.5vw, 1.25rem); font-weight: 500; margin: 6px 0 0; opacity: .85; }
+  .empty .date { font-size: clamp(1.4rem, 6vw, 2rem); font-weight: 500; opacity: .8; }
+  .urgent .left { opacity: 1; font-weight: 800; }
+  .tile input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; border: 0; margin: 0; cursor: pointer; font-size: 16px; }
+  @media (prefers-reduced-motion: reduce) { .tile { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <nav class="plates" id="plates" aria-label="Auto"></nav>
+  <label class="tile bollo" data-key="bollo">
+    <p class="name">Bollo</p><div><p class="date"></p><p class="left"></p></div>
+    <input type="date" aria-label="Scadenza bollo">
+  </label>
+  <label class="tile revisione" data-key="revisione">
+    <p class="name">Revisione</p><div><p class="date"></p><p class="left"></p></div>
+    <input type="date" aria-label="Scadenza revisione">
+  </label>
+  <label class="tile rca" data-key="assicurazione">
+    <p class="name">Assicurazione</p><div><p class="date"></p><p class="left"></p></div>
+    <input type="date" aria-label="Scadenza assicurazione">
+  </label>
+</main>
+<script>
+  const KEYS = ['bollo', 'revisione', 'assicurazione'];
+  const fmt = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  let cars = [];
+  try { cars = JSON.parse(get('scad-cars') || '[]'); } catch (e) { cars = []; }
+  if (!Array.isArray(cars) || !cars.length) {
+    // recupera le date della versione precedente, se presenti
+    const first = { id: Date.now().toString(36), targa: '' };
+    KEYS.forEach(k => { first[k] = get('scad-' + k) || ''; });
+    cars = [first];
+  }
+  cars.forEach(c => { if (c.targa === 'AUTO 1') c.targa = ''; });
+  let activeId = get('scad-active');
+  if (!cars.some(c => c.id === activeId)) activeId = cars[0].id;
+
+  const active = () => cars.find(c => c.id === activeId);
+  function persist() { set('scad-cars', JSON.stringify(cars)); set('scad-active', activeId); }
+
+  function cleanPlate(s) { return (s || '').toUpperCase().replace(/\s+/g, ' ').trim().slice(0, 10); }
+
+  function askPlate(c) {
+    const t = cleanPlate(prompt('Targa dell\'auto'));
+    if (t) c.targa = t;
+  }
+
+  function renderPlates() {
+    const nav = document.getElementById('plates');
+    nav.innerHTML = '';
+    cars.forEach(c => {
+      const b = document.createElement('button');
+      b.className = 'plate' + (c.id === activeId ? ' active' : '');
+      b.setAttribute('aria-pressed', c.id === activeId);
+      b.innerHTML = '<span class="eu">I</span><span class="num"></span>';
+      b.querySelector('.num').textContent = c.targa || 'Inserisci targa';
+      if (!c.targa) b.classList.add('noplate');
+      b.addEventListener('click', () => {
+        activeId = c.id;
+        if (!c.targa) askPlate(c);
+        persist(); renderAll();
+      });
+      nav.appendChild(b);
+    });
+    const add = document.createElement('button');
+    add.className = 'add'; add.textContent = '+'; add.setAttribute('aria-label', 'Aggiungi auto');
+    add.addEventListener('click', () => {
+      const t = cleanPlate(prompt('Targa della nuova auto'));
+      if (!t) return;
+      const c = { id: Date.now().toString(36), targa: t, bollo: '', revisione: '', assicurazione: '' };
+      cars.push(c); activeId = c.id; persist(); renderAll();
+      nav.scrollLeft = nav.scrollWidth;
+    });
+    nav.appendChild(add);
+
+    const edit = document.createElement('button');
+    edit.className = 'edit'; edit.textContent = 'Modifica';
+    edit.addEventListener('click', () => {
+      const c = active();
+      const t = prompt('Targa (svuota il campo per eliminare questa auto)', c.targa);
+      if (t === null) return;
+      const clean = cleanPlate(t);
+      if (clean) { c.targa = clean; }
+      else if (cars.length > 1 && confirm('Eliminare ' + c.targa + ' e le sue date?')) {
+        cars = cars.filter(x => x.id !== c.id);
+        if (!cars.length) cars = [{ id: Date.now().toString(36), targa: '', bollo: '', revisione: '', assicurazione: '' }];
+        activeId = cars[0].id;
+      }
+      else if (cars.length === 1 && confirm('Cancellare la targa e tutte le date?')) {
+        cars = [{ id: Date.now().toString(36), targa: '', bollo: '', revisione: '', assicurazione: '' }];
+        activeId = cars[0].id;
+      }
+      persist(); renderAll();
+    });
+    nav.appendChild(edit);
+  }
+
+  function renderTile(tile) {
+    const val = active()[tile.dataset.key] || '';
+    const input = tile.querySelector('input');
+    const dateEl = tile.querySelector('.date');
+    const leftEl = tile.querySelector('.left');
+    input.value = val;
+    tile.classList.remove('empty', 'urgent');
+    if (!val) { tile.classList.add('empty'); dateEl.textContent = 'Tocca per inserire la data'; leftEl.textContent = ''; return; }
+    const [y, m, d] = val.split('-').map(Number);
+    const due = new Date(y, m - 1, d);
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const days = Math.round((due - today) / 86400000);
+    dateEl.textContent = fmt.format(due);
+    if (days > 1) leftEl.textContent = 'tra ' + days + ' giorni';
+    else if (days === 1) leftEl.textContent = 'domani';
+    else if (days === 0) leftEl.textContent = 'scade oggi';
+    else leftEl.textContent = 'scaduto da ' + Math.abs(days) + (days === -1 ? ' giorno' : ' giorni');
+    if (days <= 30) tile.classList.add('urgent');
+  }
+
+  function renderAll() { renderPlates(); document.querySelectorAll('.tile').forEach(renderTile); }
+
+  document.querySelectorAll('.tile').forEach(tile => {
+    const input = tile.querySelector('input');
+    input.addEventListener('change', () => { active()[tile.dataset.key] = input.value; persist(); renderTile(tile); });
+    tile.addEventListener('click', () => { if (typeof input.showPicker === 'function') { try { input.showPicker(); } catch (e) {} } });
+  });
+
+  persist();
+  renderAll();
+  if (!active().targa) setTimeout(() => { askPlate(active()); persist(); renderAll(); }, 300);
+</script>
+</body>
+</html>
